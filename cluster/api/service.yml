@@ -1,0 +1,17 @@
+#  Manifest do create configuration of service who will orchestrate the api deployment
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-service
+
+spec:
+  selector:
+    app: api
+
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30000
+
+  type: NodePort

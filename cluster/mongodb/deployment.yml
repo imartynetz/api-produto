@@ -1,4 +1,4 @@
-#  Manifest do create configuration of Deployment from a docker image in a kubernet cluster.
+#  Manifest do create configuration of Deployment from a mongodb docker image in a kubernet cluster.
 #  Using only the Deployment kubectl automatic create the deployments, service and pods with
 # replicaset
 

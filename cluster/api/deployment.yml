@@ -1,0 +1,28 @@
+#  Manifest do create configuration of Deployment from a image in dockerhub in a kubernet cluster.
+#  Using only the Deployment kubectl automatic create the deployments, service and pods with
+# replicaset
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+
+spec:
+  selector:
+    matchLabels:
+      app: api
+
+  template:
+    metadata:
+      labels:
+        app: api
+
+    spec:
+      containers:
+        - name: api
+          image: imartynetz/api-produto-bootcamp:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGODB_URI
+              value: mongodb://mongouser:mongopwd42@mongodb-service:27017/admin
