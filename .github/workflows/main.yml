@@ -48,13 +48,13 @@ jobs:
         uses: Azure/k8s-deploy@v1.3
         with:
           manifests: |
-            cluster/api/mongodb/deployment.yml
-            cluster/api/mongodb/service.yml
+            cluster/mongodb/deployment.yml
+            cluster/mongodb/service.yml
 
       - name: Deploy API
         uses: Azure/k8s-deploy@v1.3
         with:
           manifests: |
-            cluster/api/api/deployment.yml
-            cluster/api/api/service.yml
+            cluster/api/deployment.yml
+            cluster/api/service.yml
 
