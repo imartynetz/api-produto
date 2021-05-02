@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: imartynetz/api-produto-bootcamp:latest
+          image: imartynetz/api-produto-bootcamp
           ports:
             - containerPort: 8080
           env:
